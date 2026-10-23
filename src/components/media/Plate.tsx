@@ -31,7 +31,9 @@ export function Plate({
     '1:1': 'aspect-square',
     '4:3': 'aspect-[4/3]',
     '2:1': 'aspect-[2/1]',
-  }[plate.ratio];
+    '9:16': 'aspect-[9/16]',
+    '16:9': 'aspect-[16/9]',
+  }[plate.ratio] || 'aspect-[4/5]';
 
   const defaultSizes = isWide
     ? '(min-width: 1024px) 54vw, 92vw'

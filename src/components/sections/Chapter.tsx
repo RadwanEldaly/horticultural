@@ -34,8 +34,8 @@ export function Chapter({ numeral, title, plates, lang }: ChapterProps) {
       <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-[var(--spacing-gutter)] items-start">
         {plates.map((plate, idx) => {
           // Span pattern across 12 cols: alternate 4-col, 6-col, 4-col, 4-col, 4-col, 8-col etc.
-          const isWide = plate.ratio === '2:1' || plate.ratio === '4:3';
-          const spanClass = plate.ratio === '2:1'
+          const isWide = plate.ratio === '2:1' || plate.ratio === '4:3' || plate.ratio === '16:9';
+          const spanClass = plate.ratio === '2:1' || plate.ratio === '16:9'
             ? 'col-span-4 md:col-span-8 lg:col-span-12'
             : isWide
             ? 'col-span-4 md:col-span-4 lg:col-span-6'
