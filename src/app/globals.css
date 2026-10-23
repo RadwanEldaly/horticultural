@@ -1,0 +1,234 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #F3EFE4;
+  --color-paper-2: #E9E3D2;
+  --color-ink: #14201A;
+  --color-foliage: #1F3D2B;
+  --color-moss: #4F6B3A;
+  --color-clay: #A8512C;
+  --color-bloom: #A3265A;
+  --color-stone: #6B6A5E;
+  --color-night: #13251B;
+  --color-sage: #8FA886;
+  --color-hairline: rgb(20 32 26 / 0.16);
+
+  --font-serif: var(--font-newsreader), var(--font-naskh), Georgia, serif;
+  --font-sans: var(--font-plex), var(--font-plex-ar), system-ui, sans-serif;
+
+  --spacing-margin: clamp(20px, 5vw, 72px);
+  --spacing-gutter: clamp(12px, 2vw, 28px);
+  --spacing-section: clamp(72px, 10vw, 144px);
+  --container-wrap: 1360px;
+
+  --ease-out: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur-base: 320ms;
+  --dur-slow: 640ms;
+  --dur-hero: 900ms;
+  --stagger: 70ms;
+}
+
+:root {
+  color-scheme: light;
+}
+
+:lang(ar) {
+  --font-serif: var(--font-naskh), var(--font-newsreader), serif;
+  --font-sans: var(--font-plex-ar), var(--font-plex), system-ui, sans-serif;
+}
+
+:lang(ar) * {
+  letter-spacing: 0 !important;
+}
+
+html {
+  scroll-padding-top: 88px;
+  background: var(--color-paper);
+  scrollbar-gutter: stable;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes curtain {
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes settle {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.hero-rise {
+  animation: rise var(--dur-hero) var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+
+.plate-curtain {
+  position: absolute;
+  inset: 0;
+  background: var(--color-paper);
+  transform-origin: top;
+  animation: curtain 1100ms var(--ease-inout) both;
+  animation-delay: var(--d, 120ms);
+}
+
+.plate-settle img {
+  animation: settle 1600ms var(--ease-out) both;
+  animation-delay: var(--d, 120ms);
+}
+
+[data-reveal='pending'] {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+[data-reveal='shown'] {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--dur-slow) var(--ease-out) calc(var(--i, 0) * var(--stagger)),
+    transform var(--dur-slow) var(--ease-out) calc(var(--i, 0) * var(--stagger));
+}
+
+html[data-switching] main {
+  opacity: 0.55;
+  transition: opacity 160ms var(--ease-out);
+}
+
+/* Subtle Botanical Animations for Editorial Floral Layer */
+@keyframes botanicalSwayA {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  35% {
+    transform: rotate(1.2deg) translate3d(2px, -1px, 0);
+  }
+  70% {
+    transform: rotate(-0.9deg) translate3d(-1px, 1.5px, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes botanicalSwayB {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  40% {
+    transform: rotate(-1.4deg) translate3d(-1.5px, 1px, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(1px, -2px, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes botanicalBreathe {
+  0%, 100% {
+    opacity: 0.58;
+  }
+  50% {
+    opacity: 0.82;
+  }
+}
+
+.botanical-sway-a {
+  animation: botanicalSwayA 16s ease-in-out infinite, botanicalBreathe 12s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.botanical-sway-b {
+  animation: botanicalSwayB 19s ease-in-out infinite, botanicalBreathe 15s ease-in-out infinite 2s;
+  will-change: transform, opacity;
+}
+
+.botanical-sway-c {
+  animation: botanicalSwayA 17s ease-in-out infinite 3s, botanicalBreathe 13s ease-in-out infinite 1s;
+  will-change: transform, opacity;
+}
+
+/* Scroll-Reactive Botanical Growth & Unfolding Mechanics */
+.botanical-stem {
+  stroke-dasharray: 100;
+  stroke-dashoffset: var(--stem-dash, 0px);
+  transition: stroke-dashoffset 90ms cubic-bezier(0.2, 0, 0, 1);
+  will-change: stroke-dashoffset;
+}
+
+.botanical-leaf {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(var(--leaf-scale, 1));
+  opacity: var(--leaf-scale, 1);
+  transition: transform 90ms cubic-bezier(0.2, 0, 0, 1), opacity 90ms cubic-bezier(0.2, 0, 0, 1);
+  will-change: transform, opacity;
+}
+
+.botanical-bud {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(var(--bud-scale, 1));
+  opacity: calc(0.2 + 0.8 * var(--bud-scale, 1));
+  transition: transform 90ms cubic-bezier(0.2, 0, 0, 1), opacity 90ms cubic-bezier(0.2, 0, 0, 1);
+  will-change: transform, opacity;
+}
+
+.botanical-blossom {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(var(--bloom-scale, 1));
+  opacity: var(--bloom-scale, 1);
+  transition: transform 90ms cubic-bezier(0.2, 0, 0, 1), opacity 90ms cubic-bezier(0.2, 0, 0, 1);
+  will-change: transform, opacity;
+}
+
+.botanical-petal {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translate(calc(var(--dx, 0px) * var(--petal-unfold, 1)), calc(var(--dy, 0px) * var(--petal-unfold, 1))) scale(calc(0.25 + 0.75 * var(--petal-unfold, 1)));
+  opacity: calc(0.3 + 0.7 * var(--petal-unfold, 1));
+  transition: transform 90ms cubic-bezier(0.2, 0, 0, 1), opacity 90ms cubic-bezier(0.2, 0, 0, 1);
+  will-change: transform, opacity;
+}
+

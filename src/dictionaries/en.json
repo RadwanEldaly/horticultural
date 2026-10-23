@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "services": "Services",
+    "gardens": "Gardens",
+    "films": "Films",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "kicker": "Agricultural Nursery & Landscape · Riyadh",
+    "h1": "Horticultural Nursery & Landscape",
+    "tagline": "End-to-end botanical landscaping and garden engineering for Riyadh residences",
+    "serviceLine": "Villa garden maintenance · Palm tree planting & relocation · Automated irrigation systems · Natural & artificial turf",
+    "primaryCta": "Call Directly",
+    "secondaryCta": "View Gardens",
+    "plate01Alt": "Flowering climbers along courtyard walls and lush villa turf in Riyadh",
+    "plate02Alt": "Curated seasonal flowerbeds and botanical borders"
+  },
+  "services": {
+    "heading": "Field Services & Horticultural Disciplines",
+    "subheading": "Direct on-site execution across Riyadh residential estates with specialized nursery care and modern equipment.",
+    "items": [
+      {
+        "id": "01",
+        "category": "Landscape & Styling",
+        "title": "Villa Grounds Maintenance & Landscaping",
+        "desc": "Comprehensive scheduled garden care, shrub trimming, soil rejuvenation, and botanical stewardship."
+      },
+      {
+        "id": "02",
+        "category": "Arboriculture & Palms",
+        "title": "Palm Tree Sourcing, Planting & Relocation",
+        "desc": "Supply and installation of mature Washingtonia and native date palms with specialized equipment."
+      },
+      {
+        "id": "03",
+        "category": "Turf & Lawns",
+        "title": "Natural Turf & Premium Artificial Grass",
+        "desc": "High-density Japanese, American, and C2000 sod alongside premium UV-tolerant synthetic turf."
+      },
+      {
+        "id": "04",
+        "category": "Irrigation Networks",
+        "title": "Automated & Water-Efficient Irrigation Hydraulics",
+        "desc": "Subsurface drip lines and pop-up rotary nozzles with digital controllers for optimal water efficiency."
+      },
+      {
+        "id": "05",
+        "category": "Stone & Water Masonry",
+        "title": "Stone Features, Waterfalls & Architectural Hardscapes",
+        "desc": "Flagstone garden walkways, natural rock waterfalls, and cascading water features."
+      },
+      {
+        "id": "06",
+        "category": "Flora & Planters",
+        "title": "Exterior Botanical Plantings & Seasonal Flora",
+        "desc": "Hardy flowering climbers, perennial shrubs, and acclimatized seasonal blooms tailored to Riyadh."
+      },
+      {
+        "id": "07",
+        "category": "Pest Management",
+        "title": "Targeted Pest Control & Agricultural Health",
+        "desc": "Eco-safe, certified treatments eradicating garden infestations and domestic pests."
+      },
+      {
+        "id": "08",
+        "category": "Palm Therapeutics",
+        "title": "Red Palm Weevil Therapeutics & Preventative Care",
+        "desc": "Specialized trunk micro-injection and topical protocols to safeguard valuable palm specimens."
+      }
+    ]
+  },
+  "gardens": {
+    "heading": "Selected Garden Monograph",
+    "subheading": "Real completed residential landscape plates in Riyadh, documenting the harmony of turf, stone paths, and flora.",
+    "viewAll": "View Complete Monograph"
+  },
+  "films": {
+    "heading": "Documented Moving Plates",
+    "subheading": "Cinematographic documentation of on-site installation, water features, and botanical craft.",
+    "filmLabel": "Film"
+  },
+  "about": {
+    "heading": "About the Nursery",
+    "subheading": "Dedicated horticultural stewardship for Riyadh residential estates.",
+    "statement": "A specialized horticultural nursery in Riyadh, providing end-to-end on-site landscaping for villas and private residences. From palm and natural turf cultivation to automated irrigation design and stone water features, each project is executed with dedicated botanical craftsmanship.",
+    "story": "",
+    "pillars": [
+      {
+        "title": "Location & Fieldwork",
+        "desc": "Direct on-site execution throughout Riyadh and neighboring residential districts."
+      },
+      {
+        "title": "Horticultural Focus",
+        "desc": "Mature palm planting, lush natural turf installation, and acclimatized perennial flora."
+      },
+      {
+        "title": "Water Efficiency",
+        "desc": "Engineered automated irrigation networks designed for optimal desert water conservation."
+      },
+      {
+        "title": "Direct Consultation",
+        "desc": "Immediate communication with field technicians to schedule site assessments."
+      }
+    ]
+  },
+  "contact": {
+    "sectionTag": "Direct Inquiries",
+    "heading": "Direct Inquiries & Consultation",
+    "callLabel": "Call directly for on-site landscape assessment",
+    "callCta": "Call Directly",
+    "whatsappCta": "Chat on WhatsApp",
+    "city": "Riyadh, Kingdom of Saudi Arabia",
+    "note": "Direct telephone consultation for residential garden styling, maintenance, and irrigation in Riyadh.",
+    "footerNote": "Direct phone and WhatsApp line for on-site nursery and landscape services in Riyadh"
+  },
+  "gallery": {
+    "title": "Gardens and Films Monograph",
+    "backHome": "Back to Home",
+    "filmsHeading": "Documented Films",
+    "completeSubtitle": "Complete Garden & Moving Monograph",
+    "filmsArchiveSubtitle": "Moving Plates Archive",
+    "platesCountSuffix": "Published Plates",
+    "filmsCountSuffix": "Documented Films"
+  },
+  "common": {
+    "call": "Call",
+    "menu": "Menu",
+    "close": "Close",
+    "backToTop": "Back to top",
+    "skipToContent": "Skip to main content",
+    "otherLangLabel": "العربية",
+    "whatsapp": "WhatsApp",
+    "chatOnWhatsapp": "Chat on WhatsApp",
+    "plateLabel": "Plate",
+    "filmLabel": "Film",
+    "detail": "Detail",
+    "filmsPlural": "Films",
+    "previous": "Previous",
+    "next": "Next",
+    "of": "of"
+  }
+}
