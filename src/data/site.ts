@@ -25,10 +25,10 @@ export const siteConfig: SiteConfig = {
   siteUrlConfirmed: false,
   brandName: '',
   phone: {
-    display: '50566902367',
-    tel: '50566902367',
-    whatsapp: '50566902367',
-    confirmed: false,
+    display: '056 690 2367',
+    tel: '+966566902367',
+    whatsapp: '+966566902367',
+    confirmed: true,
   },
   city: {
     ar: 'الرياض',
